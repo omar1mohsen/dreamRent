@@ -8,6 +8,8 @@ import { UserAuth } from "@/app/context/AuthContext";
 import { FieldValue, doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import IsValidEmail from "@/app/utilits/helpers/isVaildEmail";
+import IsValidNumber from "@/app/utilits/helpers/isVaildNumber";
 
 export interface FormData {
   name: string;
@@ -39,24 +41,24 @@ function Page() {
     if (e.target.id === "name") {
       e.target.value.length < 3
         ? setNameError("Name must be more than 3 characters")
-        : setNameError("");
+        : setNameError(null);
     }
     if (e.target.id === "number") {
-      e.target.value.length >= 11
-        ? setPhonError("")
-        : setPhonError(`Invalid phone number`);
+      IsValidNumber(e.target.value)
+        ? setPhonError(null)
+        : setPhonError(`must be vaild & start with +20`);
     }
     if (e.target.id === "email") {
-      e.target.value.length < 6
+      !IsValidEmail(e.target.value)
         ? setEmailError("Invalid Email")
-        : setEmailError("");
+        : setEmailError(null);
     }
     if (e.target.id === "password") {
       e.target.value.length < 6 || e.target.value.length > 20
         ? setPassError(
             "Your password must contain between 6 and 20 characters."
           )
-        : setPassError("");
+        : setPassError(null);
     }
     setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -64,7 +66,9 @@ function Page() {
   const creatNewUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     ;
-
+if(nameError || passError || passError || emailError){
+  return
+}
     try {
       const formDataCopy = { ...formData };
       delete formDataCopy.password;

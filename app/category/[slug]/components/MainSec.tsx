@@ -40,7 +40,7 @@ function MainSec({
           initial={{ opacity: 0, y: "100%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="mt-2"
+          className="mt-2 max-sm:pb-12"
         >
           <div className="header flex justify-between items-center  sm:px-5">
             <p className="text-lg max-sm:text-xs font-semibold my-5">

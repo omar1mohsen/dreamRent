@@ -16,6 +16,7 @@ import { UserAuth } from "@/app/context/AuthContext";
 import Link from "next/link";
 import { FcInfo } from "react-icons/fc";
 import { motion } from "framer-motion";
+import IsValidNumber from "@/app/utilits/helpers/isVaildNumber";
 
 function MainProfile() {
   const { user } = UserAuth();
@@ -81,7 +82,7 @@ function MainProfile() {
       prevData.number != number ||
       prevData.address != address
     ) {
-      if (name.length > 3 && number.length >= 11 && address.length > 6) {
+      if (name.length > 3 && IsValidNumber(number) && address.length > 6) {
         try {
           setLoading(true);
           await updateDoc(userRef, {

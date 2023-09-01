@@ -100,7 +100,7 @@ function MyListingsModal({ showUpdateModal }: { showUpdateModal: boolean }) {
             <ModalCloseBtn handleClose={handleClose} />
             {listings.length < 1 ? (
               <div className="w-full min-h-[50vh] flex justify-center items-center">
-              <h3 className={`${styles.modalHeader} capitalize !mx-0 !text-[--sec-text-color]`}>
+              <h3 className={`${styles.modalHeader} capitalize !mx-0 italic max-sm:!text-lg  !text-[--sec-text-color]`}>
                 You didn`t Create any Listing yet 
               </h3>
               </div>
