@@ -1,10 +1,8 @@
-"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import buyImgHome from '../../assets/images/buyImgHome.jpeg'
 import rentImgHome from '../../assets/images/rentImgHome.jpeg'
-import { motion } from "framer-motion";
 
 function CategoriesCards() {
   const categories = [
@@ -28,10 +26,7 @@ function CategoriesCards() {
     <div className='flex flex-wrap justify-center items-center'>
     {categories.map((category,index) =>{
             return(
-              <motion.div
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: .5 }}
+              <div
               key={index} className='w-full sm:w-[90%] max-lg:mx-auto  lg:w-1/2 h-full p-2 overflow-hidden '>
                 <Link href={category.href}>
                 <div className="categoryHomeCard py-10 flex items-center max-sm:flex-wrap min-h-full  hover:scale-[1.02] transition-all duration-200 border-2 border-gray-300/70 hover:shadow-sm hover:shadow-[--sec-text-color] hover:border-blue-300/70 shadow-md shadow-gray-300  bg-[--main-text-color] rounded-lg  px-2 pr-6">
@@ -43,7 +38,7 @@ function CategoriesCards() {
                   </div>
                 </div>
                   </Link>
-              </motion.div>
+              </div>
             )
           })}
     </div>

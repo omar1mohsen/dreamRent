@@ -5,10 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 function ExploreHero() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: "-100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: .5 }}
+    <div
       className="w-full h-[40vh] lg:h-[70vh] mt-4 rounded-xl relative overflow-hidden"
     >
       <Image
@@ -33,7 +30,7 @@ function ExploreHero() {
           prices
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
