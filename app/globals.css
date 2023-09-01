@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-color:black;
+  --sec-color : #918c8c ;
+  --bg-color : rgba(228, 225, 225, 0.482) ;
+  --main-text-color : #ffff;
+  --sec-text-color : #2697f3;
+  --dark-blue:#013b6a;
+  --red-text-color : #f60404a7;
+}
+.right-side .swiper{
+  position: relative;
+}
+.right-side .swiper-pagination {
+  width: fit-content !important;
+  height: fit-content !important ;
+  position: absolute !important;
+  background-color: white;
+  padding: 2px;
+  border-radius: 5px;
+  top: 0px !important; 
+  left:auto !important;
+  right: -3px !important;
+}
+
+.sec-title{
+  @apply text-center my-2 text-xl md:text-3xl lg:text-6xl font-bold
+}
+.sec-pragrah {
+  @apply text-center my-2  md:text-xl text-[--sec-color] font-semibold
+}
+.navgaite-btn {
+  @apply w-16 h-16 hover:text-[--sec-text-color] transition duration-200 cursor-pointer
+}
+.test-slider .swiper-pagination-bullet {
+@apply px-2 rounded-sm bg-[--main-text-color]
+}
+.test-slider .swiper-pagination-bullet:hover{
+  @apply bg-[--sec-text-color] opacity-100
+}
+.test-slider .swiper-pagination-bullet-active{
+  @apply bg-[--main-text-color]
+}
+
+.test-slider .swiper {
+  @apply py-10
+}
+
+.test-slider .swiper-slide {
+ @apply bg-cover bg-center !max-h-full !w-[70%] !pt-24 max-sm:opacity-0 opacity-30 blur bg-gray-500 transition duration-500 p-2 md:p-10 rounded-xl z-40 relative
+}
+.test-slider .swiper-slide-active{
+  @apply opacity-100  shadow-xl shadow-gray-300/40 blur-0 ;
+}
+
+.profile{
+  @apply w-[100px]  h-[100px] md:w-[150px] md:h-[150px] mx-auto rounded-[50%] absolute top-[-9%] md:top-[-15%] left-[50%] translate-x-[-50%]
+}
+
+.ActiveInput {
+  @apply bg-white cursor-pointer font-extrabold focus:cursor-default w-full py-3 px-2  rounded-lg focus:outline-blue-300
+}
+
+.DisableInput {
+  @apply  w-full py-3 px-2 border-b-2 border-gray-400/20  font-bold focus:outline-none focus:border-0 
+}
+
+/*category slider*/
+.categorySwiper .swiper-button-next ,.categorySwiper .swiper-button-prev{
+  @apply   w-9 h-9 after:hidden ;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.categorySwiper .swiper-button-next{
+  @apply after:hidden ;
+  background-image: url('../app/assets/images/nextBtn.png');
+}
+.categorySwiper .swiper-button-prev{
+  @apply after:hidden ;
+  background-image: url('../app/assets/images/prevBtn.png');
+}
+.categorySwiper .swiper-pagination-bullet-active{
+  @apply bg-[--main-text-color]
+}
+
+
+.active-link{
+  @apply !text-[--sec-text-color]
+}
+
+.messageBtn:hover .msg-icon{
+  animation: getCloser 1.5s linear infinite
+}
+@keyframes getCloser {
+  0%,10%,30%,50%,70%,90%,100%{
+      margin-left: 0.7rem;
+  }
+  40%,60%{
+    margin-left: 0.5rem;
+
+  }
+}
+
+/*pagination*/
+.paginationContanienr{
+  @apply flex my-4 justify-center items-center
+}
+.pagantionBtn {
+  @apply mx-4 w-10 h-10 flex justify-center items-center select-none bg-gray-300 text-gray-500 rounded-[50%] border-2 border-gray-300 font-semibold  hover:bg-[--sec-text-color] hover:text-gray-200
+}
+
+.PageLink {
+  @apply mx-2 w-10 h-10 flex justify-center items-center  hover:bg-[--sec-text-color] hover:text-gray-200 rounded-[50%] font-bold transition-all select-none border-2 border-gray-300
+}
+
+.activePageLink {
+  @apply bg-[--sec-text-color] text-gray-200
+}
+.disabledLink{
+  @apply opacity-25 pointer-events-none select-none
+}
+
+.categoryHomeCard:hover .categoryhomeBtn{
+  @apply bg-[--sec-text-color] text-[--main-text-color]
+}
+
+
+.exportHero{
+  animation: zoom 10s alternate-reverse linear infinite;
+}
+@keyframes zoom {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.3);
+
+  }
+}
+
+/*loader*/
+.loader {
+  border-top-color: #3498db;
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

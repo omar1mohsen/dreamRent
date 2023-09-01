@@ -1,0 +1,43 @@
+.modalBox {
+    @apply relative min-h-[50vh] rounded-xl text-[--main-text-color] bg-[--bg-color] shadow-xl px-3 py-6 w-[90%] md:w-[75%] lg:w-[60%] shadow-gray-400/70
+}
+.modalHeader{
+    @apply text-2xl font-semibold w-fit text-[--main-color] pb-1 px-3 mx-auto
+}
+
+.modalForm {
+    @apply md:w-[93%]  max-h-[80vh] max-w-full overflow-x-hidden overflow-y-scroll md:mx-auto mt-1 bg-gray-300 text-[--sec-color] px-2 ps-2 pb-6 rounded-xl
+}
+.formInput {
+    @apply my-1 space-y-1 px-2 py-3 font-bold border-b-2 border-gray-500/20
+}
+.inputLabel {
+    @apply sm:text-lg block tracking-widest max-sm:tracking-normal max-sm:text-sm
+}
+.inputBtns{
+    @apply flex justify-start items-center space-x-2
+}
+.inputBtn {
+    @apply px-12 py-1 border-2 rounded-lg bg-[--main-text-color] capitalize tracking-wider
+}
+.activeBtn {
+    @apply bg-[--sec-text-color] text-[--main-text-color]
+}
+.formTextInput {
+    @apply px-2 py-2 bg-white border-2 border-[--sec-text-color] text-[--main-color] outline-none w-full rounded-lg 
+}
+.formNumberInput {
+    @apply px-1 py-2 bg-white border-2 border-[--sec-text-color] text-[--main-color] outline-none w-28 me-8 text-center  rounded-lg
+}
+.formImagesInput {
+    @apply px-1 py-2 bg-white border-2 border-[--sec-text-color] text-[--sec-color] outline-none w-full me-8 text-center  rounded-lg
+}
+.formImagesInput::-webkit-file-upload-button{
+    @apply px-2 py-1 text-[--sec-text-color] bg-[--main-text-color]  border-0 outline-none shadow-lg rounded-xl  hover:text-[--main-text-color] hover:bg-[--sec-text-color]
+   }
+.formSubmitBtn {
+    @apply w-[50%] py-2 bg-[--main-text-color] rounded-lg text-lg font-bold mx-auto mt-6 block text-[--sec-text-color] tracking-wider hover:bg-[--sec-text-color] hover:text-[--main-text-color] transition
+}
+.listingsModal{
+    @apply relative min-h-[50vh] rounded-xl bg-[--main-text-color]  shadow-xl px-1 lg:px-3 py-6  shadow-gray-400/70 max-h-[90vh] overflow-y-scroll
+}
