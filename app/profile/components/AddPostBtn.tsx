@@ -14,14 +14,14 @@ function AddPostBtn() {
     <div className="my-2 py-5 px-3 md:px-36 bg-white rounded-lg">
       <button 
       onClick={()=>{ dispatch(showCreateModal())}}
-      className="px-2 py-3 bg-[--bg-color] rounded-lg w-full font-bold capitalize text-lg text-[--sec-text-color] hover:bg-[--sec-color] hover:text-[--main-text-color] transition flex justify-between items-center">
+      className="px-2 py-3 bg-[--bg-color] rounded-lg w-full font-bold capitalize max-sm:text-sm text-lg text-[--sec-text-color] hover:bg-[--sec-color] hover:text-[--main-text-color] transition flex justify-between items-center">
        <AiFillHome className="ms-3 w-6 h-6"/>
         sell or rent your home
         <MdOutlineKeyboardArrowRight className="me-3 w-6 h-6"/>
       </button>
       <button 
         onClick={()=>{ dispatch(showUpdateModal())}}
-      className="px-2 py-3 bg-[--bg-color] mt-4 rounded-lg w-full font-bold capitalize text-lg text-[--sec-text-color] hover:bg-[--sec-color] hover:text-[--main-text-color] transition flex justify-between items-center">
+      className="px-2 py-3 bg-[--bg-color] mt-4 rounded-lg w-full font-bold capitalize max-sm:text-sm text-lg text-[--sec-text-color] hover:bg-[--sec-color] hover:text-[--main-text-color] transition flex justify-between items-center">
        <BsFillSignpost2Fill className="ms-3 w-6 h-6"/>
         display my all Listings posts
         <MdOutlineKeyboardArrowRight className="me-3 w-6 h-6"/>

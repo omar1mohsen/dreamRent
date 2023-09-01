@@ -32,7 +32,7 @@ function MessageModal({
   //handle click 
   const handleClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
     e.preventDefault()
-    if(message && message.length > 10){
+    if(message && message.length > 1){
         window.location.href = `mailto:${landLord.email}?Subject="inquire about your Post"&body=${message}`
         toast.success('Message Has Been Sent')
         handleClose()

@@ -49,7 +49,7 @@ function UpdatePassword({
         .then(() => {
           // Password reset email sent!
           setLoading(false)
-          toast.success('your message has been sent successfully')
+          toast.success('your message has been sent successfully check your email')
         }).then(()=>{
             setEmail('')
             handleClose()
